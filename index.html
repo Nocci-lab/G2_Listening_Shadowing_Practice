@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="英検2級リスニング Part 1のシャドーイング練習教材です。">
+<title>英検2級 リスニング・シャドーイング練習</title>
+<style>
+  :root {
+    --navy:#12233f;
+    --blue:#2758c7;
+    --blue-dark:#1d45a5;
+    --sky:#eef4ff;
+    --white:#ffffff;
+    --ink:#1c2940;
+    --muted:#627089;
+    --line:#d8e1ef;
+    --green:#147a42;
+    --shadow:0 14px 38px rgba(20,44,83,.12);
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:auto; }
+  body {
+    margin:0;
+    min-height:100vh;
+    color:var(--ink);
+    background:
+      radial-gradient(circle at 10% 0%, rgba(108,151,255,.22), transparent 30rem),
+      linear-gradient(180deg,#f8faff 0%,#eef3fb 100%);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Yu Gothic",Meiryo,sans-serif;
+    line-height:1.65;
+  }
+  .hero {
+    color:var(--white);
+    background:
+      radial-gradient(circle at 85% 15%, rgba(113,160,255,.48), transparent 23rem),
+      linear-gradient(135deg,var(--navy),#1b3970 72%,#2857b2);
+    padding:64px 20px 72px;
+  }
+  .hero-inner, main { width:min(100% - 32px,980px); margin-inline:auto; }
+  .eyebrow {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-bottom:18px;
+    padding:7px 13px;
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:999px;
+    background:rgba(255,255,255,.1);
+    font-size:.82rem;
+    font-weight:800;
+    letter-spacing:.08em;
+  }
+  .eyebrow-dot { width:8px; height:8px; border-radius:50%; background:#85d8ff; }
+  h1 {
+    max-width:760px;
+    margin:0;
+    font-size:clamp(2rem,6vw,3.65rem);
+    line-height:1.18;
+    letter-spacing:.01em;
+  }
+  .lead {
+    max-width:720px;
+    margin:18px 0 0;
+    color:#dfe9ff;
+    font-size:clamp(1rem,2.2vw,1.15rem);
+  }
+  main { margin-top:-34px; padding-bottom:60px; position:relative; }
+  .intro {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:20px 22px;
+    border:1px solid rgba(216,225,239,.9);
+    border-radius:18px;
+    background:rgba(255,255,255,.97);
+    box-shadow:var(--shadow);
+  }
+  .intro strong { display:block; font-size:1.08rem; }
+  .intro p { margin:2px 0 0; color:var(--muted); font-size:.94rem; }
+  .count {
+    flex:none;
+    min-width:88px;
+    padding:9px 12px;
+    text-align:center;
+    border-radius:13px;
+    background:var(--sky);
+    color:var(--blue-dark);
+    font-weight:850;
+  }
+  .section-head { margin:40px 2px 16px; }
+  .section-head h2 { margin:0; font-size:1.55rem; }
+  .section-head p { margin:3px 0 0; color:var(--muted); }
+  .lesson-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px; }
+  .lesson-card {
+    display:flex;
+    flex-direction:column;
+    min-height:290px;
+    padding:24px;
+    border:1px solid var(--line);
+    border-radius:20px;
+    background:var(--white);
+    box-shadow:0 8px 24px rgba(20,44,83,.08);
+  }
+  .lesson-card.available { border-top:5px solid var(--blue); }
+  .card-top { display:flex; justify-content:space-between; align-items:start; gap:12px; }
+  .part-label {
+    color:var(--blue-dark);
+    font-size:.85rem;
+    font-weight:850;
+    letter-spacing:.05em;
+  }
+  .status {
+    flex:none;
+    padding:5px 10px;
+    border-radius:999px;
+    background:#eaf8f0;
+    color:var(--green);
+    font-size:.78rem;
+    font-weight:850;
+  }
+  .lesson-card h3 { margin:12px 0 5px; font-size:1.42rem; line-height:1.35; }
+  .lesson-card p { margin:0; color:var(--muted); }
+  .features { display:flex; flex-wrap:wrap; gap:7px; margin:18px 0 22px; }
+  .feature {
+    padding:5px 9px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    background:#f9fbff;
+    color:#465673;
+    font-size:.8rem;
+    font-weight:700;
+  }
+  .start-button {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+    width:100%;
+    margin-top:auto;
+    padding:13px 16px;
+    border-radius:12px;
+    color:var(--white);
+    background:var(--blue);
+    font-weight:850;
+    text-decoration:none;
+    transition:background .15s ease,transform .15s ease;
+  }
+  .start-button:hover { background:var(--blue-dark); transform:translateY(-1px); }
+  .start-button:focus-visible { outline:3px solid #9eb9ff; outline-offset:3px; }
+  .coming-card {
+    justify-content:center;
+    text-align:center;
+    border-style:dashed;
+    background:rgba(255,255,255,.58);
+  }
+  .coming-icon {
+    width:54px;
+    height:54px;
+    display:grid;
+    place-items:center;
+    margin:0 auto 11px;
+    border-radius:50%;
+    background:#e8eef9;
+    color:#6d7d98;
+    font-size:1.35rem;
+  }
+  .coming-card h3 { margin-top:0; color:#53627d; }
+  .guide {
+    margin-top:28px;
+    padding:20px 22px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:#f9fbff;
+  }
+  .guide h2 { margin:0 0 8px; font-size:1.1rem; }
+  .guide ol { margin:0; padding-left:1.35em; color:#4d5b73; }
+  footer { padding:24px 16px 36px; text-align:center; color:#748198; font-size:.85rem; }
+  @media (max-width:700px) {
+    .hero { padding:48px 16px 64px; }
+    main { width:min(100% - 24px,980px); }
+    .intro { align-items:flex-start; padding:17px; }
+    .lesson-grid { grid-template-columns:1fr; }
+    .lesson-card { min-height:270px; padding:20px; }
+    .count { min-width:auto; }
+  }
+</style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow"><span class="eyebrow-dot"></span>EIKEN GRADE 2</div>
+      <h1>英検2級<br>リスニング・シャドーイング練習</h1>
+      <p class="lead">本番音声を一文ずつ確認し、内容理解、4択問題、仕上げのシャドーイングまで練習できます。</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="intro" aria-label="教材の案内">
+      <div>
+        <strong>学習したい教材を選んでください</strong>
+        <p>スマートフォン・タブレット・パソコンに対応しています。</p>
+      </div>
+      <div class="count">全 1 教材</div>
+    </section>
+
+    <div class="section-head">
+      <h2>2025年度</h2>
+      <p>実用英語技能検定 2級 リスニング</p>
+    </div>
+
+    <section class="lesson-grid" aria-label="2025年度の教材一覧">
+      <article class="lesson-card available">
+        <div class="card-top">
+          <span class="part-label">2025年度 第1回</span>
+          <span class="status">学習できます</span>
+        </div>
+        <h3>リスニング Part 1</h3>
+        <p>No.1〜15・会話の内容一致選択</p>
+        <div class="features" aria-label="教材の機能">
+          <span class="feature">音声埋め込み</span>
+          <span class="feature">一文再生</span>
+          <span class="feature">和訳</span>
+          <span class="feature">4択判定</span>
+          <span class="feature">シャドーイング</span>
+        </div>
+        <a class="start-button" href="2kyu_2025_1_part1.html">学習を始める <span aria-hidden="true">→</span></a>
+      </article>
+
+      <article class="lesson-card coming-card" aria-label="今後追加予定">
+        <div class="coming-icon" aria-hidden="true">＋</div>
+        <h3>教材を順次追加予定</h3>
+        <p>Part 2や別の実施回も、ここから選べるようにしていきます。</p>
+      </article>
+    </section>
+
+    <section class="guide">
+      <h2>おすすめの練習順</h2>
+      <ol>
+        <li>英文と和訳を見ながら、一文ずつ音声を確認する。</li>
+        <li>会話を通して聞き、4択問題に答える。</li>
+        <li>最後に英文を隠して、本番シャドーイングに挑戦する。</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer>G2 Listening Shadowing Practice</footer>
+</body>
+</html>
